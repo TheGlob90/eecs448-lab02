@@ -43,6 +43,22 @@ bool LinkedList<T>::search(T value) const
 		Fix this method
 	*/
 
+	T track = 0;
+	if (size() != 0)
+	{
+		while (track <= m_size)
+		{
+			if (temp->getValue() == value)
+			{
+				isFound = true;
+			}
+			else
+			{
+				temp = temp->getNext();
+			}
+		}
+	}
+
 	return(isFound);
 }
 
