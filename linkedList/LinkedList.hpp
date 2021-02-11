@@ -124,7 +124,7 @@ bool LinkedList<T>::removeBack()
 		secondintoLast = m_front;
 		while(secondintoLast->getNext()->getNext() != nullptr)
 		{
-			secondintoLast = secondintoLast->getNext()
+			secondintoLast = secondintoLast->getNext();
 		}
 		delete(secondintoLast->getNext());
 		secondintoLast->setNext(nullptr);
