@@ -39,9 +39,7 @@ bool LinkedList<T>::search(T value) const
 	Node<T>* temp = m_front;
 	bool isFound = false;
 
-	/** TODO
-		Fix this method
-	*/
+	//DONE
 
 	T track = 0;
 	if (size() != 0)
@@ -120,6 +118,18 @@ bool LinkedList<T>::removeBack()
 	/** TODO
 		Fix this method
 	*/
+
+  if(!isEmpty())
+	{
+		secondintoLast = m_front;
+		while(secondintoLast->getNext()->getNext() != nullptr)
+		{
+			secondintoLast = secondintoLast->getNext()
+		}
+		delete(secondintoLast->getNext());
+		secondintoLast->setNext(nullptr);
+		isRemoved = true;
+	}
 
 	return(isRemoved);
 }
