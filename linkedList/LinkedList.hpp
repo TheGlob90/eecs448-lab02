@@ -41,10 +41,9 @@ bool LinkedList<T>::search(T value) const
 
 	//DONE
 
-	T track = 0;
-	if (size() != 0)
+	if (!isEmpty())
 	{
-		while (track <= m_size && isFound != true)
+		while (temp->getNext() != nullptr && isFound != true)
 		{
 			if (temp->getValue() == value)
 			{
